@@ -27,7 +27,7 @@ body {
   background: #f6f6f6;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5rem; /* 10px * 1.5rem = 15px */
+  font-size: 1.7rem; /* 10px * 1.7rem = 17px */
   line-height: 1.4;
 }
 
@@ -77,7 +77,7 @@ footer a:hover {
 .content-wrapper {
   margin: 0 auto;
   padding: 30px;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 /* Tooltips */
@@ -92,16 +92,20 @@ footer a:hover {
   background-color: #222;
   color: #d3d4d6;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px;
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  
-  /* Bottom Display */
-  width: 120px;
+}
+.tooltip-bottom {
   top: 105%;
   left: 50%;
   margin-left: -60px;
+}
+.tooltip-top{
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px;
 }
 .tooltip:hover .tooltip-text {
   visibility: visible;
@@ -111,7 +115,7 @@ footer a:hover {
 /* HOME
 -------------------------- */
 .home {
-  background: url(../images/bg-home-office-studio.jpg) no-repeat;
+  background: url(../images/bg-gradient.jpg) no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -123,7 +127,7 @@ footer a:hover {
   background: rgb(255 255 255 / 0.9);
   padding: 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .home .content-wrapper {
     padding: 10px;
   }
@@ -139,12 +143,12 @@ footer a:hover {
 /* RESUME
 -------------------------- */
 .resume header::before {
-  background: url(../images/bg-home-office-studio.jpg) center / cover;
+  background: url(../images/bg-gradient.jpg) center / cover;
   /* background-size: cover;
   background-position: center; */
   content: "";
   display: block;
-  height: 375px;
+  height: 200px;
 }
 .resume-section {
   margin-bottom: 50px;
@@ -158,12 +162,12 @@ footer a:hover {
   left: 5px;
   font-size: 1.5rem;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .download-link {
     position: absolute;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .resume header::before {
     height: 200px;
   }
@@ -183,7 +187,7 @@ footer a:hover {
 .project-item img {
   width: 300px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .project-item {
     display: flow-root;
   }
@@ -192,7 +196,7 @@ footer a:hover {
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 525px) and (max-width: 799px) {
+@media screen and (min-width: 650px) and (max-width: 849px) {
   .project-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -202,7 +206,7 @@ footer a:hover {
     width: 100%;
   }
 }
-@media screen and (max-width: 524px) {
+@media screen and (max-width: 650px) {
   .project-item img {
     width: 100%;
     margin-bottom: 10px;
@@ -217,7 +221,7 @@ footer a:hover {
 .work-details p {
   margin: 0;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .work-item {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -246,7 +250,7 @@ footer a:hover {
   margin: 0;
 }
 .skill-list {
-  margin: 10px 0;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -264,7 +268,7 @@ footer a:hover {
     justify-items: center;
     grid-auto-rows: 100px;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 2rem;
+    row-gap: 4rem;
   }
   .skill-logo {
     width: 100px;

@@ -36,16 +36,13 @@ h1, h2, h3 {
   font-weight: 400;
   margin: 0;
 }
-
 h1 {
   font-size: 7rem;
   line-height: 0.85;
 }
-
 h2 {
   font-size: 3.6rem;
 }
-
 h3 {
   font-size: 2.4rem;
 }
@@ -54,10 +51,15 @@ h3 {
 a {
   color: #3c8453;
 }
-
 a:hover {
   color: #bcaa96;
   text-decoration: none;
+}
+footer a {
+  color: #bcaa96;
+}
+footer a:hover {
+  color: #3c8453;
 }
 .btn {
   background: #3c8453;
@@ -78,6 +80,34 @@ a:hover {
   max-width: 800px;
 }
 
+/* Tooltips */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #222;
+  color: #d3d4d6;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  
+  /* Bottom Display */
+  width: 120px;
+  top: 105%;
+  left: 50%;
+  margin-left: -60px;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+
 /* HOME
 -------------------------- */
 .home {
@@ -86,11 +116,9 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-
 .home .content-wrapper {
   flex: 1 0 auto;
 }
-
 .content-bg {
   background: rgb(255 255 255 / 0.9);
   padding: 30px;
@@ -118,15 +146,12 @@ a:hover {
   display: block;
   height: 375px;
 }
-
 .resume-section {
   margin-bottom: 50px;
 }
-
 .resume-section h2 {
   border-bottom: 2px dashed #d3d4d6;
 }
-
 .download-link {
   position: fixed;
   top: 5px;
@@ -150,10 +175,6 @@ a:hover {
   };
 }
 
-/* Profile
--------------------------- */
-
-
 /* Projects
 -------------------------- */
 .project-item {
@@ -171,7 +192,7 @@ a:hover {
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 550px) and (max-width: 799px) {
+@media screen and (min-width: 525px) and (max-width: 799px) {
   .project-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -181,34 +202,30 @@ a:hover {
     width: 100%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 524px) {
   .project-item img {
     width: 100%;
     margin-bottom: 10px;
   }
 }
 
-/* Work Experience & Skills
+/* Work Experience
 -------------------------- */
-.work-item, .skill-category {
+.work-item {
   margin: 30px 0;
 }
-.work-details p, .skill-details p {
+.work-details p {
   margin: 0;
 }
 @media screen and (min-width: 800px) {
-  .work-item, .skill-category {
+  .work-item {
     display: grid;
     grid-template-columns: 300px 1fr;
     column-gap: 20px;
   }
-  .work-summary p:first-child, .skill-list p:first-child {
+  .work-summary p:first-child {
     margin-top: 0;
   }
-}
-
-.skill-list ul li {
-  list-style-type: none;
 }
 
 /* Education
@@ -220,6 +237,39 @@ a:hover {
   margin: 0;
 }
 
+/* Skills
+-------------------------- */
+.skill-category {
+  margin: 30px 0;
+}
+.skill-details p {
+  margin: 0;
+}
+.skill-list {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.skill-list li {
+  list-style-type: none;
+}
+.skill-logo {
+  width: 64px;
+}
+@media screen and (min-width: 525px) {
+  .skill-list {
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+  }
+  .skill-logo {
+    width: 100px;
+  }
+}
 
 /* FOOTER
 -------------------------- */
@@ -227,16 +277,6 @@ footer {
   background: #222;
   color: #d3d4d6;
 }
-
-footer a {
-  color: #bcaa96;
-}
-
-footer a:hover {
-  color: #3c8453;
-  text-decoration: none;
-}
-
 .socials {
   list-style-type: none;
   padding: 0;
@@ -245,11 +285,11 @@ footer a:hover {
   display: inline-block;
   margin-left: 10px;
 }
-.socials img:hover {
-  opacity: 50%;
-}
 .socials img {
   width: 32px;
+}
+.socials img:hover {
+  opacity: 50%;
 }
 
 @media screen and (min-width: 860px) {

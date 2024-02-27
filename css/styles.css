@@ -32,7 +32,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Caveat', cursive;
+  /* font-family: 'Caveat', cursive; */
+  font-family: 'Fredoka', cursive;
   font-weight: 400;
   margin: 0;
 }
@@ -45,6 +46,7 @@ h2 {
 }
 h3 {
   font-size: 2.4rem;
+  font-weight: 400;
 }
 
 /* links */
@@ -143,7 +145,7 @@ footer a:hover {
 /* RESUME
 -------------------------- */
 .resume header::before {
-  background: url(../images/bg-gradient.jpg) center / cover;
+  background: linear-gradient(#63a0cc, #f6f6f6);
   /* background-size: cover;
   background-position: center; */
   content: "";
@@ -176,22 +178,63 @@ footer a:hover {
   }
   h2 {
     font-size: 3.5rem;
-  };
+  }
 }
 
 /* Projects
 -------------------------- */
 .project-item {
   margin: 30px 0;
+  padding: 15px;
+  transition: 0.5s;
+  border-radius: 12px;
+  text-decoration: none;
+
+  & h3 {
+    transition: 0.5s;
+    color: #222;
+  }
+  & p {
+    transition: 0.5s;
+    color: #222;
+  }
+  & .icon-github {
+    width: 24px;
+    transition: 0.5s;
+  }
 }
-.project-item img {
-  width: 300px;
+.project-item > img {
+  width: 330px;
+}
+.project-skills {
+  margin: 10px 0;
+
+  & img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+}
+.project-item:hover {
+  background-color: #d3d4d661;
+  
+  & h3 {
+    color: #3c8453;
+  }
+  .icon-github {
+    /* width: 32px; */
+    transform: translateY(-7px);
+  }
 }
 @media screen and (min-width: 860px) {
   .project-item {
     display: flow-root;
   }
-  .project-item img {
+  .project-item > img {
     float: left;
     margin-right: 20px;
   }

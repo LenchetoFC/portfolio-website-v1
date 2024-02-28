@@ -1,12 +1,10 @@
-/* 
-  COLOR PALETTE
-
-  Dark green #3c8453
-  Sandy beige #bcaa96
-  Dark gray #222
-  Light gray #d3d4d6
-  Off-white #f6f6f6
-*/
+:root {
+  --bg-white: #f6f6f6;
+  --bg-black: #222;
+  --bg-gray: #d3d4d6;
+  --call-to-action-1: #592fc2;
+  --call-to-action-2: #63a0cc;
+}
 
 
 /* GLOBAL STYLES 
@@ -24,7 +22,7 @@ html, body {
   height: 100%;
 }
 body {
-  background: #f6f6f6;
+  background: var(--bg-white);
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 1.7rem; /* 10px * 1.7rem = 17px */
@@ -51,21 +49,23 @@ h3 {
 
 /* links */
 a {
-  color: #3c8453;
+  color: var(--call-to-action-1);
+  transition: 0.3s;
+
 }
 a:hover {
-  color: #222;
+  color: var(--bg-black);
   text-decoration: none;
 }
 footer a {
-  color: #bcaa96;
+  color: var(--call-to-action-2);
 }
 footer a:hover {
-  color: #3c8453;
+  color: var(--call-to-action-1);
 }
 .btn {
-  background: #3c8453;
-  color: #f6f6f6;
+  background: var(--call-to-action-1);
+  color: var(--bg-white);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -89,7 +89,7 @@ footer a:hover {
   width: fit-content;
   padding: 12px 24px;
   margin-top: 15px;
-  background-color: #bcaa96;
+  background-color: var(--call-to-action-2);
   border: none;
   color: #fff;
   text-transform: uppercase;
@@ -104,6 +104,7 @@ footer a:hover {
     color: var(--body-white);
     margin: 0 10px;
     font-size: 1.5rem;
+    /* transition: 0.3s; */
   }
 }
 
@@ -116,8 +117,8 @@ footer a:hover {
 .tooltip .tooltip-text {
   visibility: hidden;
   width: 120px;
-  background-color: #222;
-  color: #d3d4d6;
+  background-color: var(--bg-black);
+  color: var(--bg-gray);
   text-align: center;
   padding: 5px;
   border-radius: 6px;
@@ -162,7 +163,7 @@ footer a:hover {
     padding: 20px;
   }
   .home {
-    background: #bcaa96;
+    background: var(--call-to-action-2);
   }
 }
 
@@ -170,7 +171,7 @@ footer a:hover {
 /* RESUME
 -------------------------- */
 .resume header::before {
-  background: linear-gradient(#63a0cc, #f6f6f6);
+  background: linear-gradient(var(--call-to-action-2), var(--bg-white));
   /* background-size: cover;
   background-position: center; */
   content: "";
@@ -181,7 +182,7 @@ footer a:hover {
   margin-bottom: 50px;
 }
 .resume-section h2 {
-  border-bottom: 2px dashed #d3d4d6;
+  border-bottom: 2px dashed var(--bg-gray);
 }
 .download-link {
   position: fixed;
@@ -221,11 +222,11 @@ footer a:hover {
   }
   & h3 {
     transition: 0.5s;
-    color: #222;
+    color: var(--bg-black);
   }
   & p {
     transition: 0.5s;
-    color: #222;
+    color: var(--bg-black);
   }
   & .icon-github {
     width: 24px;
@@ -252,10 +253,10 @@ footer a:hover {
   justify-content: space-between;
 }
 .project-item:hover {
-  background-color: #d3d4d661;
+  background-color: var(--bg-gray);
   
   & h3 {
-    color: #3c8453;
+    color: var(--call-to-action-1);
   }
   .icon-github {
     /* width: 32px; */
@@ -326,7 +327,7 @@ footer a:hover {
       font-size: 2rem;
       padding: 0 0 12px;
       margin-bottom: 12px;
-      border-bottom: 2px solid #d3d4d6
+      border-bottom: 2px solid var(--bg-gray)
     }
   }
 }
@@ -387,12 +388,12 @@ footer a:hover {
   color: white;
   display: flex;
   flex-wrap: nowrap;
-  background-color: #222;
+  background-color: var(--bg-black);
   width: 900px;
 }
 .card > .row > .icon {
-  background: #f6f6f6;
-  color: #222;
+  background: var(--bg-white);
+  color: var(--bg-black);
   border-radius: 50%;
   width: 50px;
   display: flex;
@@ -413,9 +414,12 @@ footer a:hover {
   transition: all .3s ease;
 }
 .description p {
-  color: #f6f6f6;
+  color: var(--bg-white);
   padding-top: 5px;
   margin: 0;
+  > a:hover {
+    color: var(--call-to-action-2);
+  }
 }
 .description h4 {
   text-transform: uppercase;
@@ -456,8 +460,8 @@ input:checked + label .description {
 /* FOOTER
 -------------------------- */
 footer {
-  background: #222;
-  color: #d3d4d6;
+  background: var(--bg-black);
+  color: var(--bg-gray);
 }
 .socials {
   list-style-type: none;

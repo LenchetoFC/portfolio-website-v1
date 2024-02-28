@@ -236,7 +236,10 @@ footer a:hover {
   width: 330px;
 }
 .project-skills {
+  display: flex;
+  justify-content: flex-start;
   margin: 10px 0;
+  gap: 10px;
 
   & img {
     width: 24px;
@@ -340,21 +343,33 @@ footer a:hover {
 .skill-logo {
   width: 64px;
 }
+@media screen and (min-width: 525px) {
+  .skill-list {
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 4rem;
+  }
+  .skill-logo {
+    width: 100px;
+  }
+}
 
+/* Certification Sliding Cards
+-------------------------- */
 .card-wrapper {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .card-container {
   height: 400px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
 }
-
 .card {
   width: 80px;
   border-radius: .75rem;
@@ -368,14 +383,13 @@ footer a:hover {
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
   box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.8);
 }
-
 .card > .row {
   color: white;
   display: flex;
   flex-wrap: nowrap;
   background-color: #222;
+  width: 900px;
 }
-
 .card > .row > .icon {
   background: #f6f6f6;
   color: #222;
@@ -386,7 +400,6 @@ footer a:hover {
   align-items: center;
   margin: 15px;
 }
-
 .card > .row > .description {
   display: flex;
   justify-content: center;
@@ -399,31 +412,25 @@ footer a:hover {
   transition-delay: .3s;
   transition: all .3s ease;
 }
-
 .description p {
   color: #f6f6f6;
   padding-top: 5px;
   margin: 0;
 }
-
 .description h4 {
   text-transform: uppercase;
   margin: 0;
 }
-
 input {
   display: none;
 }
-
 input:checked + label {
   width: 600px;
 }
-
 input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
-
 .card[for="card-css"] {
   background-image: url('/images/bg-css-stock.jpg');
 }
@@ -431,16 +438,18 @@ input:checked + label .description {
   background-image: url('/images/bg-html-stock-2.jpg');
 }
 
-@media screen and (min-width: 525px) {
-  .skill-list {
-    display: grid;
-    justify-items: center;
-    grid-auto-rows: 100px;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 4rem;
+@media screen and (max-width: 800px) {
+  .card-container {
+    flex-direction: column;
+    width: 100%;
   }
-  .skill-logo {
-    width: 100px;
+  .card {
+    height: 170px;
+    margin: 10px 0;
+  }
+  input:checked + label {
+    height: 600px;
+    width: 100%;
   }
 }
 

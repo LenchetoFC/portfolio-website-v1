@@ -30,7 +30,6 @@ body {
 }
 
 h1, h2, h3 {
-  /* font-family: 'Caveat', cursive; */
   font-family: 'Fredoka', cursive;
   font-weight: 400;
   margin: 0;
@@ -104,7 +103,6 @@ footer a:hover {
     color: var(--body-white);
     margin: 0 10px;
     font-size: 1.5rem;
-    /* transition: 0.3s; */
   }
 }
 
@@ -112,7 +110,6 @@ footer a:hover {
 .tooltip {
   position: relative;
   display: inline-block;
-  /* border-bottom: 1px dotted black; */
 }
 .tooltip .tooltip-text {
   visibility: hidden;
@@ -172,8 +169,6 @@ footer a:hover {
 -------------------------- */
 .resume header::before {
   background: linear-gradient(var(--call-to-action-2), var(--bg-white));
-  /* background-size: cover;
-  background-position: center; */
   content: "";
   display: block;
   height: 200px;
@@ -259,7 +254,6 @@ footer a:hover {
     color: var(--call-to-action-1);
   }
   .icon-github {
-    /* width: 32px; */
     transform: translateY(-7px);
   }
 }

@@ -460,6 +460,12 @@ input:checked + label .description {
     width: 100%;
   }
 }
+@media screen and (max-width: 465px) {
+  .description p {
+    width: 175px;
+    font-size: 1.5rem;
+  }
+}
 
 /* FOOTER
 -------------------------- */

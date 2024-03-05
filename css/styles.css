@@ -443,7 +443,7 @@ input {
   display: none;
 }
 input:checked + label {
-  width: 400px;
+  width: 600px;
 }
 .card[for="card-css"] {
   background-image: url("/images/bg-css-stock.jpg");

@@ -451,6 +451,9 @@ input:checked + label {
 .card[for="card-html"] {
   background-image: url("/images/bg-html-stock-2.jpg");
 }
+.card[for="card-js"] {
+  background-image: url("/images/bg-js-stock.jpg");
+}
 
 @media screen and (max-width: 800px) {
   .card-container {

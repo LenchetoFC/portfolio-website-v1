@@ -443,22 +443,26 @@ input {
   display: none;
 }
 input:checked + label {
-  width: 600px;
+  width: 500px;
 }
 .card[for="card-css"] {
   background-image: url("/images/bg-css-stock.jpg");
 }
 .card[for="card-html"] {
-  background-image: url("/images/bg-html-stock-2.jpg");
+  background-image: url("/images/bg-html-stock.jpg");
 }
 .card[for="card-js"] {
   background-image: url("/images/bg-js-stock.jpg");
+}
+.card[for="card-ecma"] {
+  background-image: url("/images/bg-ecma-stock.jpg");
 }
 
 @media screen and (max-width: 800px) {
   .card-container {
     flex-direction: column;
     width: 100%;
+    height: 500px;
   }
   .card {
     height: 260px;

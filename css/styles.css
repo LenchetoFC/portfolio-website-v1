@@ -335,7 +335,8 @@ footer a:hover {
 
 /* Skills
 -------------------------- */
-.skill-category {
+.skill-category,
+.certification-list {
   margin: 30px 0;
   & ul {
     list-style-type: none;
@@ -351,25 +352,23 @@ footer a:hover {
   margin: 0;
 }
 .skill-list {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  row-gap: 10px;
+  display: grid;
+  justify-items: center;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4rem;
+  margin: 3rem 0;
 }
 .skill-logo {
-  width: 64px;
+  width: 100px;
 }
-@media screen and (min-width: 525px) {
+@media screen and (min-width: 585px) {
   .skill-list {
-    display: grid;
-    justify-items: center;
-    grid-auto-rows: 100px;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 4rem;
+    margin: 4rem 0;
   }
   .skill-logo {
-    width: 100px;
+    width: 125px;
   }
 }
 
@@ -380,6 +379,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .card-container {
   height: 400px;
@@ -454,8 +454,8 @@ input:checked + label {
 .card[for="card-js"] {
   background-image: url("/images/bg-js-stock.jpg");
 }
-.card[for="card-ecma"] {
-  background-image: url("/images/bg-ecma-stock.jpg");
+.card[for="card-git"] {
+  background-image: url("/images/bg-git-stock.jpg");
 }
 
 @media screen and (max-width: 800px) {

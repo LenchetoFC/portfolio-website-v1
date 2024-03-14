@@ -367,9 +367,6 @@ footer a:hover {
     grid-template-columns: repeat(4, 1fr);
     margin: 4rem 0;
   }
-  .skill-logo {
-    width: 125px;
-  }
 }
 
 /* Certification Sliding Cards
